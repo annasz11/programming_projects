@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boardgame</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+
+        <!-- Board and restart button-->
+        <div id="board-and-restart">
+            <div id="header">
+                <h1 id="board-title">Burgonya térkép</h1>
+                <button id="restart-button">Új játék</button>
+            </div>
+            <table id="board-table">
+                <tbody id="board-body"></tbody>
+            </table>
+
+        </div>
+
+        <!-- Side Elements -->
+        <div id="side-elements">
+
+                <div class="side-top">
+                <div id="seasons">
+                    <div class="spring">
+                        <div class="season-name">Tavasz</div>
+                        <div class="season-points"></div>
+                    </div>
+                    <div class="summer">
+                        <div class="season-name">Nyár</div>
+                        <div class="season-points"></div>
+                    </div>
+                    <div class="fall">
+                        <div class="season-name">Ősz</div>
+                        <div class="season-points"></div>
+                    </div>
+                    <div class="winter">
+                        <div class="season-name">Tél</div>
+                        <div class="season-points"></div>
+                    </div>
+                </div>
+
+                <p id="total-score"></p>
+            </div>
+
+            <div class="side-middle">
+                <p id="current-season">Jelenlegi évszak:</p>
+
+                <div id="missions"></div>
+
+                <p id="left-from-season">Évszakból hátralevő idő:</p>
+            </div>
+
+            <div class="side-bottom">
+                <div id="current-element">
+                    <div id="current-element-texts">
+                        <p id="elem-to-be-placed">Lehelyezendő elem:</p>
+                        <div id="element-time"></div>
+                        <button id="rotate-button">Forgatás</button>
+                        <button id="mirror-button">Tükrözés</button>
+                    </div>
+                    <div id="current-element-card">
+                        <table id="element-table">
+                            <tbody id="element-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    <script src="persistence.js"></script>
+    <script src="helpers.js"></script>
+    <script src="elements.js"></script>
+    <script src="mission.js"></script>
+    <script src="board.js"></script>
+    <script src="game.js"></script>
+    <script src="mainscript.js"></script>
+
+    </div>
+</body>
+</html>

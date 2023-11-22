@@ -1,0 +1,424 @@
+#game-container {
+    background-color: #fee9cc76;
+    display: flex;
+    min-height: 0;
+    flex-direction: row;
+    font-size: 1em;
+    gap: 60px;
+    font-family: Arial;
+}
+
+/* Left side elements */
+#board-and-restart {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px 20px 20px;
+    width: 50%;
+    gap: 20px;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+#board-title {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+
+/* Board and cells */
+table {
+    display: table;
+    border-spacing: 2px;
+    border-collapse: separate;
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 1%;
+}
+
+td {
+    background-image: url('assignment_assets/assets/tiles/base_tile.png');
+    vertical-align: middle;
+    width: 8%;
+    aspect-ratio: 1/1;
+    color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.mountain-cell {
+    background-image: url('assignment_assets/assets/tiles/mountain_tile.png');
+}
+
+.water-cell {
+    background-image: url('assignment_assets/assets/tiles/water_tile.png');
+}
+
+.town-cell {
+    background-image: url('assignment_assets/assets/tiles/village_tile.png');
+}
+
+.forest-cell {
+    background-image: url('assignment_assets/assets/tiles/fox_in_the_forest_tile.png');
+}
+
+.farm-cell {
+    background-image: url('assignment_assets/assets/tiles/plains_tile.png');
+}
+
+.preview-water-cell {
+    opacity: 0.5;
+    background-image: url('assignment_assets/assets/tiles/water_tile.png');
+}
+
+.preview-town-cell {
+    opacity: 0.5;
+    background-image: url('assignment_assets/assets/tiles/village_tile.png');
+}
+
+.preview-forest-cell {
+    opacity: 0.5;
+    background-image: url('assignment_assets/assets/tiles/fox_in_the_forest_tile.png');
+}
+
+.preview-farm-cell {
+    opacity: 0.5;
+    background-image: url('assignment_assets/assets/tiles/plains_tile.png');
+}
+
+
+/* Restart button */
+#restart-button {
+    justify-content: right;
+    width: 20%;
+    height: 60%;
+    margin-top:20px;
+    font-size: 0.8em;
+    background-color: #7130f3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#restart-button:hover {
+    background-color: #925ded;
+}
+
+#restart-button:active {
+    transform: scale(0.97);
+}
+
+
+/* Right side elements */
+#side-elements {
+    display: flex;
+    width: 50%;
+    padding: 20px 20px 20px 0px;
+    flex-direction: column;
+}
+
+.side-top, .side-middle, .side-bottom {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    gap: 10px;
+}
+
+.side-top {
+    flex: 1;
+}
+.side-middle {
+    flex: 2;
+}
+.side-bottom {
+    flex: 1;
+}
+
+
+/* Styles for the seasons */
+#seasons {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    gap: 10%;
+}
+
+.winter, .spring, .summer, .fall {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    aspect-ratio: 1/1;
+    text-align: center;
+    border-radius: 4%;
+    border-style: solid;
+    border-width: 5px;
+    color: #fff;
+}
+
+.spring {
+    border: 5px solid #198f2d;
+    background-color: #65c957;
+}
+.summer {
+    border: 5px solid #ffcb5c;
+    background-color: #ffec71;
+}
+.fall {
+    border: 5px solid #d6831e;
+    background-color: #f9b13c;
+}
+.winter {
+    border: 5px solid #3582bd;
+    background-color: #53c6db;
+}
+
+.season-name {
+    margin-top: 4px;
+    flex: 1;
+    vertical-align: middle;
+    justify-content: center;
+}
+
+.season-points {
+    flex: 1;
+    font-size: 1em;
+}
+
+
+#total-score {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: top;
+    margin: 0px;
+}
+
+#current-season {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border-bottom: 1px #000000;
+    border-bottom-style: solid;
+    margin-bottom: 0px;
+}
+
+
+/* Styles for the missions */
+#missions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    height: 100%;
+}
+
+.erdoSzele-mission, .almosVolgy-mission, .krumpliOntozes-mission, .hatarVidek-mission, .fasor-mission, .gazdagVaros-mission, .ontozoCsatorna-mission, .magusokVolgye-mission, .uresTelek-mission, .sorhaz-mission, .paratlanSilok-mission, .gazdagVidek-mission {
+    display: flex;
+    flex: 2;
+    flex-direction: row;
+    background-image: url("assignment_assets/assets/missions_hun/background.png");
+    color: transparent;
+    background-size: cover;
+    width: 100%;
+    border-radius: 3%;
+    color: #fff;
+    padding: 5px 0px 5px 5px;
+}
+
+.erdoSzele-mission-picture {
+    background-image: url("assignment_assets/assets/missions_hun/erdoSzele.png");
+    background-size: contain;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+.almosVolgy-mission-picture {
+    background-image: url("assignment_assets/assets/missions_hun/almosVolgy.png");
+    background-size: contain;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+.krumpliOntozes-mission-picture {
+    background-image: url("assignment_assets/assets/missions_hun/krumpliOntozes.png");
+    background-size: contain;
+    width: 100%;
+    background-repeat: no-repeat;
+
+}
+.hatarVidek-mission-picture {
+    background-image: url("assignment_assets/assets/missions_hun/hatarVidek.png");
+    background-size: contain;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+.fasor-mission-picture {
+    background-image: url("assignment_assets/assets/missions_hun/fasor.png");
+    background-size: contain;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+.gazdagVaros-mission-picture {
+    background-image: url("assignment_assets/assets/missions_hun/gazdagVaros.png");
+    background-size: contain;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+.ontozoCsatorna-mission-picture {
+    background-image: url("assignment_assets/assets/missions_hun/ontozoCsatorna.png");
+    background-size: contain;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+.magusokVolgye-mission-picture {
+    background-image: url("assignment_assets/assets/missions_hun/magusokVolgye.png");
+    background-size: contain;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+.uresTelek-mission-picture {
+    background-image: url("assignment_assets/assets/missions_hun/uresTelek.png");
+    background-size: contain;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+.sorhaz-mission-picture {
+    background-image: url("assignment_assets/assets/missions_hun/sorhaz.png");
+    background-size: contain;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+.paratlanSilok-mission-picture {
+    background-image: url("assignment_assets/assets/missions_hun/paratlanSilok.png");
+    background-size: contain;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+.gazdagVidek-mission-picture {
+    background-image: url("assignment_assets/assets/missions_hun/gazdagVidek.png");
+    background-size: contain;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+
+.mission-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mission-title {
+    display: flex;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+.mission-description {
+    display: flex;
+    font-size: 0.7em;
+}
+
+.mission-points-letter {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.mission-points {
+    display: flex;
+    flex: 1;
+    font-size: 0.7em;
+}
+.mission-letter {
+    display: flex;
+    flex: 1;
+    font-size: 0.7em;
+    justify-content: right;
+    padding-right: 0.5em;
+}
+
+
+#left-from-season {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items:left;
+    padding-top: 5px;
+    border-top: 1px #000000;
+    border-top-style: solid;
+    margin-top: 0px;
+}
+
+
+/* Current element styles */
+#current-element {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 20px;
+    width: 100%;
+}
+
+#current-element-texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+#elem-to-be-placed {
+    display: flex;
+    flex-direction: column;
+    align-items:left;
+    margin-bottom: 5px;
+}
+
+#element-time{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-bottom: 20px;
+    font-size: 0.8em;
+}
+
+#current-element-texts button {
+    width: 60%;
+    text-align: center;
+    justify-content:center;
+    padding: 7px;
+    font-size: 0.8em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #7130f3;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+#current-element-texts button:hover {
+    background: #925ded;
+}
+
+#current-element-texts button:active {
+    transform: scale(0.95);
+}
+
+#current-element-card {
+    display: flex;
+    flex-direction: column;
+    align-items:left;
+    width: 20%;
+}
+
+#element-table-card {
+    width: 100%;
+}
+
+#element-table td {
+    background-color: #ffffff;
+}
